@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANET QN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 style="color: white; font-size: 30px;">WEIGHT ON DIFFERENT PLANETS</h2>
+    <div class="container">
+    <input id="massWeight" type="number">
+    <select name="SelectPlanet" id="SelectPlanet"></select>
+    <button onclick="calcWeight()" id="button">Calculate Weight</button></div>
+    <div class="container2">
+        
+    <img  id="image" src="" alt="">
+    <h1 id="result">kg</h1>
+    </div>
+    
+    
+
+
+
+    <script>
+        const planets=[
+            {planet :"Sun", gravity :27.9, image: "sun1.jpg"},
+            {planet :"Moon", gravity :0.1 , image: "moon.webp"},
+            {planet :"Mercury", gravity :0.377 , image: "merury.jpg"},
+            {planet :"Venus", gravity :0.9032 , image: "venus.jpg"},
+            {planet :"Earth", gravity :1 , image: "earthimage.jpg"},
+            {planet :"Mars", gravity :0.3895 , image: "mars.jpg"},
+            {planet :"Jupitor", gravity :2.640, image: "Jupiter.webp"},
+            {planet :"Saturn", gravity :1.139, image: "saturn.jpg"},
+            {planet :"Uranus", gravity :0.917, image: "uranus.jpg"},
+            {planet :"Neptune", gravity :1.148, image: "neptune.jpg"}
+        ]
+        planets.map((ele)=>{
+            const option =document.createElement("option")
+            option.innerText= ele.planet
+            option.value=ele.gravity
+            option.setAttribute("name",ele.image)
+           const  selects =document.getElementById("SelectPlanet")
+           selects.appendChild(option);
+            
+        })
+        function calcWeight() {
+            var mass=+document.getElementById("massWeight").value
+            const  select =document.getElementById("SelectPlanet")
+            var selectedIndex= select.selectedIndex
+            const selectedoption = select.options[selectedIndex]
+            const gravity =+selectedoption.value
+            const Weight=mass*gravity
+            console.log(Weight);
+            var result =document.getElementById("result")
+            result.innerText =Weight
+            result.classList.add("heading")
+            var imagesrc =selectedoption.getAttribute("name")
+            const img =document.getElementById("image")
+            img.classList.add("images")
+            img.src=imagesrc
+
+        }
+
+    </script>
+    
+</body>
+</html>

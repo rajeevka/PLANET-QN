@@ -1,0 +1,71 @@
+body{
+    background-image: url(https://thumbs.gfycat.com/FrequentIncomparableAlligatorgar-size_restricted.gif);
+    background-size: contain;
+}
+body{
+    margin-top: -150px;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    margin: 20px;
+    width: 30%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.container2{
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    background: url(https://thumbs.gfycat.com/FrequentIncomparableAlligatorgar-size_restricted.gif);
+    border-radius: 20px;
+
+}
+.images{
+    width: 600px;
+    height: 370px;
+    border-radius: 20px;
+}
+.heading{
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-left: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    height: 200px;
+    width: 300px;
+    background-color: beige;
+   filter: blur(.3px);
+}
+#result{
+    color: rgb(0, 0, 0);
+}
+#button{
+    background-color: white;
+    border-radius: 10px;
+     color: red;
+      height: 38px;
+ width: 150px;
+}
+#SelectPlanet{
+    margin-top: -1px;
+ background-color: white;
+ height: 42px;
+ width: 150px;
+    border-radius: 10px;
+     color: red;
+     border: 4px solid rgb(0, 0, 0);
+   
+}
+#massWeight{
+    height: 32px;
+    width: 150px;
+    border-radius: 10px;
+}
